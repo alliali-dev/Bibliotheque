@@ -4,7 +4,8 @@
             <!-- dashbord -->
             <a class="navbar-brand" href="">
                 <!-- logo -->
-                <img src="{{asset('images/affiches/logo_bibliosave.jpg')}}" alt="Logo" style="width: 80px; height:45px;">
+                <img src="{{asset('images/affiches/logo_bibliosave.jpg')}}" alt="Logo"
+                    style="width: 80px; height:45px;">
                 <!-- endlogo -->
             </a>
             <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
@@ -22,7 +23,8 @@
                 </div>
 
                 <div class="dropdown for-notification">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="notification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="notification"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fa fa-bell"></i>
                         <span class="count bg-danger">3</span>
                     </button>
@@ -44,14 +46,16 @@
                 </div>
 
                 <div class="dropdown for-message">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="message" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="message" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
                         <i class="fa fa-envelope"></i>
                         <span class="count bg-primary">4</span>
                     </button>
                     <div class="dropdown-menu" aria-labelledby="message">
                         <p class="red">You have 4 Mails</p>
                         <a class="dropdown-item media" href="#">
-                            <span class="photo media-left"><img alt="avatar" src="{{asset('eladmin/images/avatar/1.jpg')}}"></span>
+                            <span class="photo media-left"><img alt="avatar"
+                                    src="{{asset('eladmin/images/avatar/1.jpg')}}"></span>
                             <div class="message media-body">
                                 <span class="name float-left">Jonathan Smith</span>
                                 <span class="time float-right">Just now</span>
@@ -59,7 +63,8 @@
                             </div>
                         </a>
                         <a class="dropdown-item media" href="#">
-                            <span class="photo media-left"><img alt="avatar" src="{{asset('eladmin/images/avatar/2.jpg')}}"></span>
+                            <span class="photo media-left"><img alt="avatar"
+                                    src="{{asset('eladmin/images/avatar/2.jpg')}}"></span>
                             <div class="message media-body">
                                 <span class="name float-left">Jack Sanders</span>
                                 <span class="time float-right">5 minutes ago</span>
@@ -67,7 +72,8 @@
                             </div>
                         </a>
                         <a class="dropdown-item media" href="#">
-                            <span class="photo media-left"><img alt="avatar" src="{{asset('eladmin/images/avatar/3.jpg')}}"></span>
+                            <span class="photo media-left"><img alt="avatar"
+                                    src="{{asset('eladmin/images/avatar/3.jpg')}}"></span>
                             <div class="message media-body">
                                 <span class="name float-left">Cheryl Wheeler</span>
                                 <span class="time float-right">10 minutes ago</span>
@@ -75,7 +81,8 @@
                             </div>
                         </a>
                         <a class="dropdown-item media" href="#">
-                            <span class="photo media-left"><img alt="avatar" src="{{asset('eladmin/images/avatar/4.jpg')}}"></span>
+                            <span class="photo media-left"><img alt="avatar"
+                                    src="{{asset('eladmin/images/avatar/4.jpg')}}"></span>
                             <div class="message media-body">
                                 <span class="name float-left">Rachel Santos</span>
                                 <span class="time float-right">15 minutes ago</span>
@@ -87,28 +94,28 @@
             </div>
 
             <div class="user-area dropdown float-right">
-                <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    
-                    @php
-                    $a=Auth::user()->image;
-                    $X= Auth::user()->name;
-                    @endphp
+                <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+
+
                     <!-- photo de profile -->
-                    <img class="user-avatar rounded-circle" src="{{ asset('fichiers/Avatar/'.$a)}}" style="width: 50px; height:50px;">
+                    <img class="user-avatar rounded-circle" src="{{ asset('fichiers/Avatar/')}}"
+                        style="width: 50px; height:50px;">
                     <!-- endphoto -->
                 </a>
 
                 <div class="user-menu dropdown-menu">
-                    <a class="nav-link" href="#"><i class="fa fa- user"></i>{{ $X}}</a>
+                    <!-- <a class="nav-link" href="#"><i class="fa fa- user"></i></a>
 
-                    <a class="nav-link" href="#"><i class="fa fa- user"></i>Notifications <span class="count">13</span></a>
+                    <a class="nav-link" href="#"><i class="fa fa- user"></i>Notifications <span
+                            class="count">13</span></a>
 
-                    <a class="nav-link" href="#"><i class="fa fa -cog"></i>paramètre</a>
+                    <a class="nav-link" href="#"><i class="fa fa -cog"></i>paramètre</a> -->
 
-                    <form method="POST" action="{{ route('logout') }}">
+                    <form method="POST" action="{{ '#' }}">
                         @csrf
-                        <a class="nav-link" href="{{ route('logout1') }}">
-                            <i class="fa fa-power -off"></i>Se deconnecter</a>
+                        <a class="nav-link" href="{{ '#' }}">
+                            <!-- <i class="fa fa-power -off"></i>Se deconnecter</a> -->
                     </form>
 
                 </div>

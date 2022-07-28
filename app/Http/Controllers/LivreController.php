@@ -42,7 +42,7 @@ class LivreController extends Controller
             $validator = Validator::make(
                 $request->all(),
                 [
-                    'NomLivre' => 'bail|required|string|unique:livre,LibLivre|min:2|max:50',
+                    'NomLivre' => 'required|string|unique:livre,LibLivre|min:2|max:50',
                     'dateedi' => 'required|date',
                     'Typelivre' => 'required|string',
                     'Auteur' => 'required|string',
@@ -114,7 +114,7 @@ class LivreController extends Controller
     {
 
         $Livres = LivreModel::paginate('5');
-        return view('/livres/numerique.liste', compact('Livres'));
+        return view('/home', compact('Livres'));
     }
 
     public function listeForAdmin()
@@ -170,7 +170,5 @@ class LivreController extends Controller
 
     public function auteur()
     {
-        # code...
-
     }
 }
