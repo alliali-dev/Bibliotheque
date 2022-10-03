@@ -1,4 +1,4 @@
-@extends('modele.layouts.mainadmin')
+@extends('modele.layouts.main')
 <title>{{config('app.name')}}|@yield('title','Ajouter un éditeur')</title>
 @section('content')
 <div class="breadcrumbs">
@@ -28,19 +28,19 @@
 <div class="content">
     <div class="animated fadeIn">
         <div class="col-md-10 col-lg-12">
-            
-                <form action="{{ route('saveedi') }}" class="form" method="post" media="all" enctype="multipart/form-data">
-                    @csrf()
-                    <div class="row">
-                        <div class="col-xs-7 col-sm-7 col-md-8 col-lg-8">
-                            <input type="text" class="form-control" id="libedi" style="width: 99%;" name="libedi"pattern="{{ '[A-Za-zÂ-Ûâ-ûà-ùÄ-Üä-ü0-9éè\' ]{2,50}' }}" title="Pas de caractères spéciaux et la taille doit être comprise entre 2 et 50 caractères"  autofocus  placeholder="Saisir le nom de l'éditeur ici" >
-                        </div>
-                        <div class="col-xs-5 col-sm-5 col-md-4 col-lg-4">
-                            <button class="btn btn-danger" type="reset">Reprendre</button>&nbsp;
-                            <button class="btn btn-primary" type="submit">Ajouter</button>
-                        </div>
+
+            <form action="{{ route('saveedi') }}" class="form" method="post" media="all" enctype="multipart/form-data">
+                @csrf()
+                <div class="row">
+                    <div class="col-xs-7 col-sm-7 col-md-8 col-lg-8">
+                        <input type="text" class="form-control" id="libedi" style="width: 99%;" name="libedi" pattern="{{ '[A-Za-zÂ-Ûâ-ûà-ùÄ-Üä-ü0-9éè\' ]{2,50}' }}" title="Pas de caractères spéciaux et la taille doit être comprise entre 2 et 50 caractères" autofocus placeholder="Saisir le nom de l'éditeur ici">
                     </div>
-                </form>
+                    <div class="col-xs-5 col-sm-5 col-md-4 col-lg-4">
+                        <button class="btn btn-danger" type="reset">Reprendre</button>&nbsp;
+                        <button class="btn btn-primary" type="submit">Ajouter</button>
+                    </div>
+                </div>
+            </form>
 
         </div> <!-- .card -->
     </div>

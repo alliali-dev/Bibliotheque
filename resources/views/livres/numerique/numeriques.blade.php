@@ -1,4 +1,4 @@
-@extends('modele.layouts.mainsuperadmin')
+@extends('modele.layouts.main')
 <title>{{config('app.name')}}|@yield('title','Ajouter un livre')</title>
 @section('content')
 <div class="breadcrumbs">
@@ -36,14 +36,13 @@
                             <label for="NomLivre">Nom Livre</label>
                         </div> -->
                         <div class="col-xs-8 col-sm-8 col-md-6 col-lg-7">
-                            <input type="text" class="form-control" name="NomLivre" id="NomLivre" value="{{ old('NomLivre') }}" pattern="{{ '[A-Za-zÂ-Ûâ-ûà-ùÄ-Üä-ü0-9é\' ]{2,50}' }}"
-                             title="Pas de caractères spéciaux et la taille doit être comprise entre 2 et 50 caractères" autofocus placeholder="Saisir le nom du livre ici" required>
+                            <input type="text" class="form-control" name="NomLivre" id="NomLivre" value="{{ old('NomLivre') }}" pattern="{{ '[A-Za-zÂ-Ûâ-ûà-ùÄ-Üä-ü0-9é\' ]{2,50}' }}" title="Pas de caractères spéciaux et la taille doit être comprise entre 2 et 50 caractères" autofocus placeholder="Saisir le nom du livre ici" required>
                         </div>
                         <!-- <div class="col-xs-4 col-sm-3 col-md-2 col-lg-1 offset-1">
                             <label for="dateedi">Edité</label>
                         </div> -->
                         <div class="col-xs-4 col-sm-4 col-md-5 col-lg-4">
-                           <!-- <label for="dateedi">Edité :</label> -->
+                            <!-- <label for="dateedi">Edité :</label> -->
                             <input type="date" class="form-control" name="dateedi" id="dateedi" title="Choisissez la date d'édition du livre ici" value="{{ old('dateedi') }}">
                         </div>
                     </div><br>
@@ -56,7 +55,7 @@
                                 <option value="" readonly>{{ 'Sélectionnez le type de livre' }}</option>
                                 <option value="" readonly>{{ '-------------------------------' }}</option>
                                 @foreach($Typelivres as $typelivre)
-                                
+
                                 <option value="{{ $typelivre->id }}">{{ $typelivre->LibType }}</option>
                                 @endforeach
                             </select>
@@ -107,7 +106,7 @@
                             <label for="Couverture">Couverture </label> &nbsp;&nbsp;&nbsp;
                         </div>
                         <div class="col-xs-10 col-sm-8 col-md-6 col-lg-4">
-                            <input type="file" class="form-control" name="Photolivre"  title="Choisissez la photo du livre" value="{{ old('Photolivre') }}" id="Photolivre" accept="image/*">
+                            <input type="file" class="form-control" name="Photolivre" title="Choisissez la photo du livre" value="{{ old('Photolivre') }}" id="Photolivre" accept="image/*">
                         </div>
                         <div class="col-xs-4 col-sm-3 col-md-2 col-lg-1 offset-1">
                             <label for="Livrepdf">PDF/Audio </label>&nbsp;&nbsp;&nbsp;

@@ -74,7 +74,7 @@
 
 <body>
     <!-- Left Panel -->
-    @include('modele.layouts.sidebarsuperadmin')
+    @include('modele.layouts.sidebar')
     <!-- /#left-panel -->
     <!-- Right Panel -->
     <div id="right-panel" class="right-panel">

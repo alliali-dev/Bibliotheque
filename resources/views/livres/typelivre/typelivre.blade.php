@@ -1,4 +1,4 @@
-@extends('modele.layouts.mainadmin')
+@extends('modele.layouts.main')
 <title>{{ config('app.name') }}| @yield('title','Ajoutez une catégorie')</title>
 @section('content')
 <div class="breadcrumbs">
@@ -28,16 +28,16 @@
 <div class="content">
     <div class="animated fadeIn">
         <div class="col-lg-12">
-            
+
             <form action="{{ route('savetypelivre') }}" class="form" method="post" media="all" enctype="multipart/form-data" style="margin-top: 15px; margin-left: 5px;">
-                    @csrf()
-                <div class="row">   
+                @csrf()
+                <div class="row">
                     <div class="col-xs-7 col-sm-7 col-md-8 col-lg-8">
-                        <select  class="form-control" name="{{'typeLiv'}}" id="typeLiv" required>
-                            <option  value="" readonly>Sélectionnez le type de livre</option>
+                        <select class="form-control" name="{{'typeLiv'}}" id="typeLiv" required>
+                            <option value="" readonly>Sélectionnez le type de livre</option>
                             <!-- <option  value="" readonly>-----------------------------</option> -->
-                            <option  value="{{'pdf'}}">Pdf</option>
-                            <option  value="{{'audio'}}">Audio</option>
+                            <option value="{{'pdf'}}">Pdf</option>
+                            <option value="{{'audio'}}">Audio</option>
                         </select>
                     </div>
                     <div class="col-xs-5 col-sm-5 col-md-4 col-lg-4">
@@ -47,7 +47,7 @@
                 </div>
             </form>
 
-             <!-- .card -->
+            <!-- .card -->
 
         </div>
     </div>

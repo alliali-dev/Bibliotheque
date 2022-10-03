@@ -1,4 +1,4 @@
-@extends('modele.layouts.mainsuperadmin')
+@extends('modele.layouts.main')
 <title>{{config('app.name')}}|@yield('title','Ajouter un éditeur')</title>
 @section('content')
 <div class="breadcrumbs">

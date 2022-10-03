@@ -1,4 +1,4 @@
-@extends('modele.layouts.mainsuperadmin')
+@extends('modele.layouts.main')
 <title>{{config('app.name')}}|@yield('title','liste des editeurs')</title>
 @section('content')
 <div class="breadcrumbs">
@@ -35,30 +35,30 @@
                             <strong class="card-title">Liste des Editeurs</strong>
                         </div>
                         <div class="table-stats order-table ov-h">
-                        <table class="table ">
-                                    <thead>
-                                        <tr>
-                                            <th class="serial">#</th>
-                                            <th>Nom de l'Editeur</th>
-                                            <th>Date de creation</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
+                            <table class="table ">
+                                <thead>
+                                    <tr>
+                                        <th class="serial">#</th>
+                                        <th>Nom de l'Editeur</th>
+                                        <th>Date de creation</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
                                     @forelse($Editeurs as $item)
-                                        <tr>
-                                            <td class="serial">{{ $item->IdEdi }}</td>
-                                            </td>
-                                            <td>{{ $item->LibEd }}</td>
-                                            <td>{{ $item->created_at }}</td>
-                                            <td>
-                                                <span class="badge badge-complete">Modifier</span>
-                                            </td>
-                                        </tr>
+                                    <tr>
+                                        <td class="serial">{{ $item->IdEdi }}</td>
+                                        </td>
+                                        <td>{{ $item->LibEd }}</td>
+                                        <td>{{ $item->created_at }}</td>
+                                        <td>
+                                            <span class="badge badge-complete">Modifier</span>
+                                        </td>
+                                    </tr>
                                     @empty
-                                            <td>Pas d'éditeur renseigné</td>
+                                    <td>Pas d'éditeur renseigné</td>
                                     @endforelse
-                                    </tbody>
-                                </table>
+                                </tbody>
+                            </table>
                             <nav class="navbar-link" style="width: 45px ; height: 45px;">
                                 {{ $Editeurs->links('pagination::bootstrap-4') }}
                             </nav>

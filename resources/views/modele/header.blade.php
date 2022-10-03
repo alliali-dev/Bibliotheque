@@ -32,8 +32,7 @@
                 <div class="col-md-3">
                     <div class="header-logo">
                         <a href="" class="logo">
-                            <img src="{{asset('images/affiches/logo_bibliosave.jpg')}}"
-                                style="width: 150px; height:90px;" alt="logo">
+                            <img src="{{asset('images/affiches/logo_bibliosave.jpg')}}" style="width: 150px; height:90px;" alt="logo">
                         </a>
                     </div>
                 </div>
@@ -82,7 +81,7 @@
                                 <span style="color:white; font-size:15px;">&VerticalBar;</span>
                                 <!-- </div>|
 							<div class="col-sm-6 col-md-8 col-lg-10"> -->
-                                <a href="{{ '#' }}" style="color:white; font-size:15px;">
+                                <a href="{{ route('login') }}" style="color:white; font-size:15px;">
                                     <button class="btn btn-primary"><i class="fa fa-lock"></i></button> Connexion
                                 </a>
                             </div>

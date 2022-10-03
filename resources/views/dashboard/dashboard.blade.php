@@ -1,4 +1,4 @@
-@extends('modele.layouts.mainsuperadmin')
+@extends('modele.layouts.main')
 @section('content')
 
 <div class="content">
@@ -117,7 +117,7 @@
                                     </div>
                                 </div>
                                 <div class="progress-box progress-2">
-                                    <h4 class="por-title">Targeted  Visitors</h4>
+                                    <h4 class="por-title">Targeted Visitors</h4>
                                     <div class="por-txt">99,658 Users (90%)</div>
                                     <div class="progress mb-2" style="height: 5px;">
                                         <div class="progress-bar bg-flat-color-4" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
@@ -163,7 +163,7 @@
                                                 </div>
                                             </td>
                                             <td> #5469 </td>
-                                            <td>  <span class="name">Louis Stanley</span> </td>
+                                            <td> <span class="name">Louis Stanley</span> </td>
                                             <td> <span class="product">iMax</span> </td>
                                             <td><span class="count">231</span></td>
                                             <td>
@@ -178,7 +178,7 @@
                                                 </div>
                                             </td>
                                             <td> #5468 </td>
-                                            <td>  <span class="name">Gregory Dixon</span> </td>
+                                            <td> <span class="name">Gregory Dixon</span> </td>
                                             <td> <span class="product">iPad</span> </td>
                                             <td><span class="count">250</span></td>
                                             <td>
@@ -193,7 +193,7 @@
                                                 </div>
                                             </td>
                                             <td> #5467 </td>
-                                            <td>  <span class="name">Catherine Dixon</span> </td>
+                                            <td> <span class="name">Catherine Dixon</span> </td>
                                             <td> <span class="product">SSD</span> </td>
                                             <td><span class="count">250</span></td>
                                             <td>
@@ -208,7 +208,7 @@
                                                 </div>
                                             </td>
                                             <td> #5466 </td>
-                                            <td>  <span class="name">Mary Silva</span> </td>
+                                            <td> <span class="name">Mary Silva</span> </td>
                                             <td> <span class="product">Magic Mouse</span> </td>
                                             <td><span class="count">250</span></td>
                                             <td>
@@ -223,7 +223,7 @@
                                                 </div>
                                             </td>
                                             <td> #5465 </td>
-                                            <td>  <span class="name">Johnny Stephens</span> </td>
+                                            <td> <span class="name">Johnny Stephens</span> </td>
                                             <td> <span class="product">Monitor</span> </td>
                                             <td><span class="count">250</span></td>
                                             <td>
@@ -235,7 +235,7 @@
                             </div> <!-- /.table-stats -->
                         </div>
                     </div> <!-- /.card -->
-                </div>  <!-- /.col-lg-8 -->
+                </div> <!-- /.col-lg-8 -->
 
                 <div class="col-xl-4">
                     <div class="row">
@@ -254,9 +254,9 @@
                                 <div class="card-body">
                                     <h4 class="card-title m-0  white-color ">August 2018</h4>
                                 </div>
-                                 <div class="card-body">
-                                     <div id="flotLine5" class="flot-line"></div>
-                                 </div>
+                                <div class="card-body">
+                                    <div id="flotLine5" class="flot-line"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -335,8 +335,8 @@
                                     <li>
                                         <div class="msg-received msg-container">
                                             <div class="avatar">
-                                               <img src="images/avatar/64-1.jpg" alt="">
-                                               <div class="send-time">11.11 am</div>
+                                                <img src="images/avatar/64-1.jpg" alt="">
+                                                <div class="send-time">11.11 am</div>
                                             </div>
                                             <div class="msg-box">
                                                 <div class="inner-box">
@@ -353,8 +353,8 @@
                                     <li>
                                         <div class="msg-sent msg-container">
                                             <div class="avatar">
-                                               <img src="images/avatar/64-2.jpg" alt="">
-                                               <div class="send-time">11.11 am</div>
+                                                <img src="images/avatar/64-2.jpg" alt="">
+                                                <div class="send-time">11.11 am</div>
                                             </div>
                                             <div class="msg-box">
                                                 <div class="inner-box">
@@ -448,7 +448,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <label class="control-label">Category Name</label>
-                                    <input class="form-control form-white" placeholder="Enter name" type="text" name="category-name"/>
+                                    <input class="form-control form-white" placeholder="Enter name" type="text" name="category-name" />
                                 </div>
                                 <div class="col-md-6">
                                     <label class="control-label">Choose Category Color</label>
@@ -471,7 +471,7 @@
                 </div>
             </div>
         </div>
-    <!-- /#add-category -->
+        <!-- /#add-category -->
     </div>
     <!-- .animated -->
 </div>

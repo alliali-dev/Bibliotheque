@@ -1,4 +1,4 @@
-@extends('modele.layouts.mainadmin')
+@extends('modele.layouts.main')
 @section('content')
 <div class="breadcrumbs">
     <div class="breadcrumbs-inner">

@@ -20,24 +20,32 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('home');
-// });
+Route::get('/', function () {
+    return view('home');
+});
 
 //Dashboard
 
-// Route::get('/dashboard.dashboarduser', function () { return view('dashboard.dashboarduser');})->middleware(['web'])->name('dashb');
-// Route::get('/dashboard.dashboardadmin', function () { return view('dashboard.dashboardadmin');})->middleware(['web'])->name('boss');
-// Route::get('/dashboard', function () { return view('dashboard.dashboardsuperadmin');})->middleware(['web'])->name('bigboss');
+
+// Route::get('/dashboard.dashboardadmin', function () {
+//     return view('dashboard.dashboardadmin');
+// })->middleware(['web'])->name('boss');
+// Route::get('/dashboard', function () {
+//     return view('dashboard.dashboardsuperadmin');
+// })->middleware(['web'])->name('bigboss');
 
 
-// require __DIR__.auth'/web.php';
+require __DIR__ . '/auth.php';
+
+Route::get('/dashboard/dashboard', function () {
+    return view('dashboard.dashboard');
+})->middleware(['auth'])->name('dashboard');
 
 
 //home
-Route::get('/', function () {
-    return view('home');
-})->name('home');
+// Route::get('/', function () {
+//     return view('home');
+// })->name('home');
 
 Route::get('/livres/categories.categorie', [CategorieController::class, 'create'])->middleware(['web'])->name('catg');  //retourne formulaire categorie
 Route::get('/livres/categories.categories', [CategorieController::class, 'createForSuperAdmin'])->middleware(['web'])->name('catgs');

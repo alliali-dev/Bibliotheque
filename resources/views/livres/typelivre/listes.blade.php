@@ -1,4 +1,4 @@
-@extends('modele.layouts.mainsuperadmin')
+@extends('modele.layouts.main')
 <title>{{ config('app.name') }}| @yield('title','Liste des types de livre')</title>
 @section('content')
 <div class="breadcrumbs">

@@ -29,29 +29,12 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(LoginRequest $request)
     {
-        
+
         $request->authenticate();
 
         $request->session()->regenerate();
 
-        $statut = $request->user()->statut; //recupere le statut de l'utilisateur connecte
-
-        // redirection apres authentification a travers le statut
-        if ($statut == 1) {
-            // visiteur
-            return redirect()->route('dashb');
-        } elseif ($statut == 2) {
-            // administrateur
-            return redirect()->route('boss');
-        } elseif ($statut == 3) {
-            // super  administrateur
-            return redirect()->route('bigboss');
-        } else {
-
-            // si le statut est inconnu, il retourne sur la page d'acceuil
-            return redirect()->route('home');
-        }
-
+        return redirect()->route('dashboard');
         // intended(RouteServiceProvider::HOME);
     }
 
